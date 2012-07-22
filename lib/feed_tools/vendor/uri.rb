@@ -701,7 +701,7 @@ module FeedTools
             normalized_section[index] == '/'[0]
           new_section << normalized_section[index..index]
         else
-          new_section << ("%" + normalized_section[index].to_s(16).upcase)
+          new_section << ("%" + normalized_section[index].ord.to_s(16).upcase)
         end
       end
       normalized_section = new_section
